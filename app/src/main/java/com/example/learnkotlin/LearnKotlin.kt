@@ -10,6 +10,7 @@ fun main() {
     println("larger numer is " + value)
     val value2 = largerName1(a, b)
     println("larger numer1 is " + value2)
+    checknum()
 
 }
 
@@ -53,4 +54,14 @@ fun getScore2(name: String) = when (name) {
     "Lily" -> 100
     else -> 0
 }
-fun CheckNum(num:Number)
+
+fun checknum() {
+    for (i in 0..10)
+        println(i)
+    var d: Int = 19
+    for (d in 19..25)
+    {
+        println(d)
+    }
+
+}
