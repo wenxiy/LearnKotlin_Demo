@@ -7,7 +7,6 @@ fun main() {
     for (fruit in list){
         println(fruit)
     }
-
 }
 
 fun largerName(num1: Int, num2: Int): Int {
