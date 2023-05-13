@@ -37,15 +37,30 @@ fun main() {
     // 数组如何进行for循环遍历
     // 依次取出数组中元素--for-in的形式
     for (item in intArr3) {
-     //   println(item)
+        //   println(item)
     }
     //下标遍历,根据下标再取出对应位置元素
     //for-in
     for (i in intArr3.indices) {
-     //   println(i.toString() + "->" + intArr3[i])
+        //   println(i.toString() + "->" + intArr3[i])
     }
     //for循环--同时遍历下标和元素
-    for ((index , item) in intArr3.withIndex()) {
+    for ((index, item) in intArr3.withIndex()) {
         println("$index->$item")
     }
+    //forEach会依次回调给我们数组中的元素
+    intArr3.forEach {
+        println("forEach: $it") //这里的it代表的是数组元素
+    }
+    //forEach增强版 会依次回调给我们数组中的下标和元素
+    intArr3.forEachIndexed{ index , item ->
+        println("$index: $item")
+    }
+    //集合：集合的大小可以动态的改变，而数组不同
+    /*
+        · List： 有序列表 通过索引访问元素、元素可以重复
+        · Set： 唯一元素的集合，一组无重复的对象。顺序不重要
+        · Map： （字典） 一组键值对。键是唯一的，每一个键映射一个值，值不唯一
+
+     */
 }
