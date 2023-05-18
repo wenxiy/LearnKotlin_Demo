@@ -14,5 +14,5 @@ fun main() {
 
     items.forEachIndexed { index, item->
         println("forEachIndexed: ${index},${item}")
-    }
+    }///11
 }
