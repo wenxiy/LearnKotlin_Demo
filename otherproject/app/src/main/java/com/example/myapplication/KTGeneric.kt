@@ -39,9 +39,26 @@ class User : JSONObject(), Comparable<User> {
 
 open class Animal
 
-class DogAnimal : Animal()
+open class DogAnimal : Animal()
 
-class CatAnimal : 
+class CatAnimal : Animal()
+
+class WhiteDogAnimal : DogAnimal()
+
+fun animalFuns() {
+    //泛型类型限定如下所示
+    //类型转换错误演示，集合类型强转是不被允许的,加out或者in是允许的
+    //  val animalList1 : ArrayList<Animal> = ArrayList<DogAnimal>()
+    val animalList2: ArrayList<out Animal> = ArrayList<DogAnimal>()
+    //简化写法如下所示
+    val animalList3: ArrayList<Animal> = ArrayList<DogAnimal>()
+    //使用in关键字声明，约定泛型的下限，允许传入的泛型类型是DogAnimal及其父类Animal
+    val animalList: ArrayList<in DogAnimal> = ArrayList<Animal>()
+}
+
+//在class里面加入out
+class ArrayList<out T> {
+}
 
 abstract class Color<T>(val t: T) {
     abstract fun printColor()
