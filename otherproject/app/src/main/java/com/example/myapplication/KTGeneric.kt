@@ -51,14 +51,14 @@ fun animalFuns() {
     //  val animalList1 : ArrayList<Animal> = ArrayList<DogAnimal>()
     val animalList2: ArrayList<out Animal> = ArrayList<DogAnimal>()
     //简化写法如下所示
-    val animalList3: ArrayList<Animal> = ArrayList<DogAnimal>()
+   // val animalList3: ArrayList<Animal> = ArrayList<DogAnimal>()
     //使用in关键字声明，约定泛型的下限，允许传入的泛型类型是DogAnimal及其父类Animal
-    val animalList: ArrayList<in DogAnimal> = ArrayList<Animal>()
+    // val animalList: ArrayList<DogAnimal> = ArrayList<Animal>()
 }
 
-//在class里面加入out
-class ArrayList<out T> {
-}
+////在class里面加入out
+//class ArrayList<out T> {
+//}
 
 abstract class Color<T>(val t: T) {
     abstract fun printColor()
